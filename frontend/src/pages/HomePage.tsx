@@ -46,7 +46,6 @@ const HomePage = () => {
 
             const jsonData = await res.json();
 
-            // ✅ Fix: Prevent crash if data is not an array
             if (res.ok && Array.isArray(jsonData.data)) {
                 setData(jsonData.data);
             } else {
